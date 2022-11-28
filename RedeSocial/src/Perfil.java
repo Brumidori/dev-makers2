@@ -37,7 +37,6 @@ public class Perfil {
 
     void imprimir(){
         System.out.println("Nome: " + nome);
-        System.out.println("Login: " + email);
         try{
         for (Post p : posts){
             p.imprimir();

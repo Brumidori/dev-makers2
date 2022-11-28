@@ -5,8 +5,6 @@ public class Post {
     public String conteudo;
 
     void imprimir(){
-        System.out.println(data);
-        System.out.println(hora);
-        System.out.println(conteudo);
+        System.out.println(data + " as " + hora + " - Postou: " + conteudo);
     }
 }
