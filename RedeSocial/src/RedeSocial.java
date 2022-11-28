@@ -221,13 +221,16 @@ public class RedeSocial {
                         postar(userLogado);
                         menuHome();
                         break;
+
                     case 2:
                         timeline(userLogado);
                         menuHome();
                         break;
+
                     case 3:
                         menuInicial();
                         break;
+
                     default:
                         System.out.println("Opcao invalida. Tente novamente!");
                         menuHome();
@@ -240,7 +243,6 @@ public class RedeSocial {
             System.out.println("Opcao invalida. Insira um numero.");
         }
     }
-
 
     public static void postar(Perfil p) {
         p.postar();

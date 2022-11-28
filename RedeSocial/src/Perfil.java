@@ -18,14 +18,14 @@ public class Perfil {
         this.senha = senha;
     }
 
-    public Perfil(){
+    public Perfil() {
         //vazio
     }
 
     Post[] posts = new Post[10];
     int quantPosts = 0;
 
-    void postar (){
+    void postar() {
         Post p = new Post();
         p.data = LocalDate;
         p.hora = LocalHour;
@@ -35,12 +35,13 @@ public class Perfil {
         System.out.println("Post Cadastrado. Redirecionando....");
     }
 
-    void imprimir(){
+    void imprimir() {
         System.out.println("Nome: " + nome);
-        try{
-        for (Post p : posts){
-            p.imprimir();
-        }} catch (NullPointerException e){
+        try {
+            for (Post p : posts) {
+                p.imprimir();
+            }
+        } catch (NullPointerException e) {
             System.out.println("----Sem novos posts ----");
         }
     }
