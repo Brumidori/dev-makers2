@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.UUID;
 
-public class Professor {
+public class ProfessorW {
     
     String nome;
     String registro;
@@ -13,8 +13,8 @@ public class Professor {
     List<String> disciplina = new ArrayList<String>();
     int salario;
     
-    public static Professor registrar(String nome, String turma, String disciplina, int salario) {
-        Professor professor = new Professor();
+    public static ProfessorW registrar(String nome, String turma, String disciplina, int salario) {
+        ProfessorW professor = new ProfessorW();
         professor.registro = UUID.randomUUID().toString();
         professor.nome = nome;
         professor.turma = Collections.singletonList(turma);
@@ -28,7 +28,7 @@ public class Professor {
         System.out.println("O professor "+ nome + " deu a disciplina de " + disciplina + " no dia " + LocalDate);
     }
 
-    public void atribuirNota(Aluno aluno, double nota){
+    public void atribuirNota(AlunoW aluno, double nota){
         System.out.println(aluno.nome + " recebeu a nota: " + nota+ " na disciplina de " + disciplina);
     }
 

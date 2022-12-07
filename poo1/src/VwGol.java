@@ -17,10 +17,6 @@ public class VwGol {
         this.cor = cor;
     }
 
-    public static VwGol montar() {
-        // Contexto static pertence a classe e não ao objeto
-        return new VwGol();
-    }
 
     public void ligar() {
         // Sem a palavra static o método pertence ao contexto do objeto

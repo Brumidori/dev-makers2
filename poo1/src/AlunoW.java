@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.UUID;
 
-public class Aluno {
+public class AlunoW {
 
     String matricula;
     String nome;
@@ -9,8 +9,8 @@ public class Aluno {
     int presenca;
     String curso;
 
-    public static Aluno matricular(String nome, String curso) {
-        Aluno aluno = new Aluno();
+    public static AlunoW matricular(String nome, String curso) {
+        AlunoW aluno = new AlunoW();
         //aluno.matricula = String.valueOf(System.currentTimeMillis()); //usar com cuidado nos loops
         aluno.matricula = UUID.randomUUID().toString();
         aluno.nome = nome;
