@@ -1,9 +1,12 @@
 package view;
 
+import controller.CadastroController;
+
 import java.util.Scanner;
 
 public class MenuInicialView {
     static final Scanner input = new Scanner(System.in);
+    CadastroView cadastroView = new CadastroView();
 
     public void mostrarMenuInicial() {
         System.out.println("-------------------------- MENU INICIAL ---------------------------");
@@ -19,6 +22,9 @@ public class MenuInicialView {
                     case 1:
                         System.out.println("-------------------------- CADASTRO ---------------------------");
                         //cadastrarPerfil();
+                        cadastroView.cadastroNome();
+                        cadastroView.cadastroEmail();
+                        cadastroView.cadastroSenha();
                         mostrarMenuInicial();
                         break;
 
