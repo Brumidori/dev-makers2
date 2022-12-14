@@ -1,3 +1,5 @@
+package model;
+
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
@@ -9,8 +11,8 @@ public class Perfil {
     public String nome;
     public String email;
     public String senha;
-    //ArrayList<Perfil> seguintes = new ArrayList();
-    //ArrayList<Perfil> seguidores = new ArrayList();
+    //ArrayList<model.Perfil> seguintes = new ArrayList();
+    //ArrayList<model.Perfil> seguidores = new ArrayList();
 
     public Perfil(String nome, String email, String senha) {
         this.nome = nome;
@@ -25,17 +27,17 @@ public class Perfil {
     Post[] posts = new Post[10];
     int quantPosts = 0;
 
-    void postar() {
+    public void postar() {
         Post p = new Post();
         p.data = LocalDate;
         p.hora = LocalHour;
         System.out.println("Texto post: ");
         p.conteudo = scanner.nextLine();
         posts[quantPosts++] = p;
-        System.out.println("Post Cadastrado. Redirecionando....");
+        System.out.println("model.Post Cadastrado. Redirecionando....");
     }
 
-    void imprimir() {
+    public void imprimir() {
         System.out.println("Nome: " + nome);
         try {
             for (Post p : posts) {
