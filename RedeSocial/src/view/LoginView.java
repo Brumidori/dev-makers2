@@ -12,7 +12,8 @@ import static repository.ListaUsuarios.perfils;
 
 public class LoginView {
     static final Scanner input = new Scanner(System.in);
-    LoginController loginController = new LoginController();
+    private LoginController loginController = new LoginController();
+    private MenuHomeView menuHomeView = new MenuHomeView();
     private RedeSocial rede = new RedeSocial();
     boolean user = false;
     boolean password = false;
@@ -29,7 +30,7 @@ public class LoginView {
             if (user == true && password == true) {
                 login = false;
                 System.out.println("Ola, " + rede.getUserLogado().nome + ". Seja bem-vinde!");
-                //menuHome();
+                menuHomeView.mostrarMenuHome();
             }
         }
     }
