@@ -1,12 +1,12 @@
 package view;
 
-import controller.CadastroController;
+import model.RedeSocial;
 
 import java.util.Scanner;
 
 public class MenuInicialView {
     static final Scanner input = new Scanner(System.in);
-    CadastroView cadastroView = new CadastroView();
+    private RedeSocial redeSocial = new RedeSocial();
 
     public void mostrarMenuInicial() {
         System.out.println("-------------------------- MENU INICIAL ---------------------------");
@@ -21,16 +21,13 @@ public class MenuInicialView {
                 switch (opcao) {
                     case 1:
                         System.out.println("-------------------------- CADASTRO ---------------------------");
-                        //cadastrarPerfil();
-                        cadastroView.cadastroNome();
-                        cadastroView.cadastroEmail();
-                        cadastroView.cadastroSenha();
+                        redeSocial.cadastroPerfil();
                         mostrarMenuInicial();
                         break;
 
                     case 2:
                         System.out.println("-------------------------- LOGIN ---------------------------");
-                        //login();
+                        redeSocial.logar();
                         break;
 
                     case 3:

@@ -1,20 +1,39 @@
 package model;
 
-import java.util.ArrayList;
+import repository.ListaUsuarios;
+import view.CadastroView;
+import view.LoginView;
+
 import java.util.List;
 
 public class RedeSocial {
 
-    private List<Perfil> perfis = new ArrayList<>();
+    private static Perfil userLogado;
 
-    Perfil teste = new Perfil("teste", "teste@email.com", "test123");
+    public Perfil getUserLogado() {
+        return userLogado;
+    }
 
-    public List<Perfil> getPerfis() {
-        return this.perfis;
+    public void setUserLogado(Perfil userLogado) {
+        this.userLogado = userLogado;
+    }
+
+    public List<Perfil> getPerfils(){
+        return ListaUsuarios.perfils;
     }
 
     public void addPerfil(Perfil perfil) {
-        this.perfis.add(perfil);
+        ListaUsuarios.perfils.add(perfil);
+    }
+
+    public void cadastroPerfil(){
+        CadastroView cadastroView = new CadastroView();
+        cadastroView.cadastroPerfil();
+    }
+
+    public void logar(){
+        LoginView loginView = new LoginView();
+        loginView.logar();
     }
 
 }

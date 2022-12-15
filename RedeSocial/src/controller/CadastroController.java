@@ -7,9 +7,9 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class CadastroController {
-        private static RedeSocial rede = new RedeSocial();
+   private RedeSocial rede = new RedeSocial();
 
-    public static boolean validaEmail(String email) {
+    public boolean validaEmail(String email) {
         boolean validacaoEmail = false;
         if (email != null && email.length() > 0) {
             String expression = "^[\\w\\.-]+@([\\w\\-]+\\.)+[A-Z]{2,4}$";
@@ -22,10 +22,10 @@ public class CadastroController {
         return validacaoEmail;
     }
 
-    public static boolean buscaEmail(String email) {
+    public boolean buscaEmail(String email) {
         boolean emailExiste = false;
-        for (int i = 0; i < rede.getPerfis().size(); i++) {
-            if (rede.getPerfis().get(i).getEmail().equals(email)) {
+        for (int i = 0; i < rede.getPerfils().size(); i++) {
+            if (rede.getPerfils().get(i).getEmail().equals(email)) {
                 emailExiste = true;
                 System.out.println("Email já cadastrado.");
             }
@@ -33,11 +33,17 @@ public class CadastroController {
         return emailExiste;
     }
 
-    public static boolean validaSenha(String senha) {
+    public boolean validaSenha(String senha) {
         boolean validacaoSenha = false;
         if (senha != null && senha.length() >= 6) {
             validacaoSenha = true;
         }
         return validacaoSenha;
+    }
+
+    public Perfil cadastroPerfil(String nome, String email, String senha){
+        Perfil perfil = new Perfil(nome, email, senha);
+        rede.addPerfil(perfil);
+        return perfil;
     }
 }

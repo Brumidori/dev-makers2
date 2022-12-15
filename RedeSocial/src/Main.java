@@ -1,3 +1,4 @@
+import model.Perfil;
 import view.MenuInicialView;
 
 public class Main {
@@ -10,79 +11,14 @@ public class Main {
 
         MenuInicialView miv = new MenuInicialView();
         miv.mostrarMenuInicial();
-//
 
-//    public static void cadastrarPerfil() {
-//        Perfil p = new Perfil();
-//        p.nome = cadastroNome();
-//        p.email = cadastroEmail();
-//        p.senha = cadastroSenha();
-//        System.out.println(p.nome.toUpperCase() + " seu perfil foi cadastrado com SUCESSO!\nVoce sera redirecionado para o Menu Inicial.");
-//        perfis[quantPerfis++] = p;
-//    }
 
 //
-//    static Perfil userLogado = perfis[0];
 //
-//    public static void login() {
-//        boolean login = true;
-//        boolean user = false;
-//        boolean password = false;
 //
-//        while (login) {
-//            try {
-//                user = validaLogin();
-//            } catch (UserNotFoundException e) {
-//                System.out.println(e.getMessage());
-//                login();
-//            }
-//            try {
-//                password = validaPassword();
-//            } catch (InvalidPasswordException e) {
-//                System.out.println(e.getMessage());
-//                login();
-//            }
 //
-//            if (user == true && password == true) {
-//                login = false;
-//                System.out.println("Ola, " + userLogado.nome + ". Seja bem-vinde!");
-//                menuHome();
-//            }
-//        }
-//    }
 //
-//    public static boolean validaLogin() throws UserNotFoundException {
-//        boolean emailEncontrado = false;
-//        System.out.println("Login (email): ");
-//        String loginUser = input.nextLine();
 //
-//        for (int i = 0; i < quantPerfis; i++) {
-//            if (perfis[i].email.equals(loginUser)) {
-//                emailEncontrado = true;
-//                userLogado = perfis[i];
-//            }
-//        }
-//        if (emailEncontrado == false) {
-//            throw new UserNotFoundException();
-//        }
-//        return emailEncontrado;
-//    }
-//
-//    public static boolean validaPassword() throws InvalidPasswordException {
-//        boolean senhaEcontradado = false;
-//        System.out.println("Senha: ");
-//        String password = input.nextLine();
-//
-//        for (int i = 0; i < quantPerfis; i++) {
-//            if (perfis[i].senha.equals(password)) {
-//                senhaEcontradado = true;
-//            }
-//        }
-//        if (senhaEcontradado == false) {
-//            throw new UserNotFoundException();
-//        }
-//        return senhaEcontradado;
-//    }
 //
 //    public static void menuHome() {
 //        try {
