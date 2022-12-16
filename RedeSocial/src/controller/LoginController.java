@@ -26,7 +26,7 @@ public class LoginController {
         boolean senhaEcontradado = false;
 
         for (Perfil perfils : rede.getPerfils()){
-            if (perfils.senha.equals(password)) {
+            if (perfils.getSenha().equals(password)) {
                 senhaEcontradado = true;
             }
         }

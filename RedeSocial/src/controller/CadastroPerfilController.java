@@ -6,7 +6,7 @@ import model.RedeSocial;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class CadastroController {
+public class CadastroPerfilController {
    private RedeSocial rede = new RedeSocial();
 
     public boolean validaEmail(String email) {

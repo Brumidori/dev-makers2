@@ -1,17 +1,20 @@
 package view;
 
-import controller.CadastroController;
+import controller.CadastroPerfilController;
 import model.Perfil;
 
 import java.util.Scanner;
 
 public class CadastroView {
     static final Scanner input = new Scanner(System.in);
-    CadastroController controller = new CadastroController();
+    private CadastroPerfilController controller = new CadastroPerfilController();
+    private String cadastroNome;
+    private String cadastroEmail;
+    private String cadastroSenha;
 
     private String cadastroNome() {
         System.out.println("Por favor, digite seu NOME: ");
-        String cadastroNome = input.nextLine();
+        cadastroNome = input.nextLine();
         if (cadastroNome != null && cadastroNome.length() > 1) {
             System.out.println("Nome cadastrado.");
         } else {
@@ -23,7 +26,7 @@ public class CadastroView {
 
     private String cadastroEmail() {
         System.out.println("Insira seu login (e-mail):");
-        String cadastroEmail = input.nextLine();
+        cadastroEmail = input.nextLine();
         if (controller.validaEmail(cadastroEmail) == true && controller.buscaEmail(cadastroEmail) == false) {
             System.out.println("Email cadastrado.");
         } else {
@@ -35,7 +38,7 @@ public class CadastroView {
 
     private String cadastroSenha() {
         System.out.println("Insira sua SENHA (min 6 caracteres): ");
-        String cadastroSenha = input.nextLine();
+        cadastroSenha = input.nextLine();
         if (controller.validaSenha(cadastroSenha) == true) {
             System.out.println("Senha cadastrada.");
         } else {

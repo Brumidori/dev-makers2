@@ -1,8 +1,11 @@
 package model;
 
+import repository.ListaPost;
 import repository.ListaUsuarios;
 import view.CadastroView;
 import view.LoginView;
+import view.PostView;
+import view.TimeLineView;
 
 import java.util.List;
 
@@ -34,6 +37,20 @@ public class RedeSocial {
     public void logar(){
         LoginView loginView = new LoginView();
         loginView.logar();
+    }
+
+    public void postar(Perfil userLogado){
+        PostView postView = new PostView();
+        postView.postar(userLogado);
+    }
+
+    public void addPost(Post post) {
+        ListaPost.posts.add(post);
+    }
+
+    public void mostrarTimeLine() {
+        TimeLineView timeLineView = new TimeLineView();
+        timeLineView.mostrarTimeLine();
     }
 
 }

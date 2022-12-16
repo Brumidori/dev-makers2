@@ -1,11 +1,16 @@
 package view;
 
+import model.Perfil;
+import model.RedeSocial;
+
 import java.util.Scanner;
 
 public class MenuHomeView {
     static final Scanner input = new Scanner(System.in);
     private MenuInicialView menuInicialView = new MenuInicialView();
-    public void mostrarMenuHome() {
+    private RedeSocial redeSocial = new RedeSocial();
+
+    public void mostrarMenuHome(Perfil userLogado) {
         try {
             System.out.println("-------------------------- HOME ---------------------------");
             System.out.println("Digite '1' para POSTAR ou '2' para ir a TIMELINE.\nPara deslogar e voltar ao menu incial digite '3'.");
@@ -14,14 +19,14 @@ public class MenuHomeView {
                 int opcao = escolha;
                 switch (opcao) {
                     case 1:
-                        System.out.println("----- POSTAR -----");
-                        //postar(userLogado);
-                        mostrarMenuHome();
+                        System.out.println("-------------------------- POSTAR --------------------------");
+                        redeSocial.postar(userLogado);
+                        mostrarMenuHome(userLogado);
                         break;
 
                     case 2:
-                       // timeline(userLogado);
-                        mostrarMenuHome();
+                       redeSocial.mostrarTimeLine();
+                        mostrarMenuHome(userLogado);
                         break;
 
                     case 3:
@@ -30,7 +35,7 @@ public class MenuHomeView {
 
                     default:
                         System.out.println("Opcao invalida. Tente novamente!");
-                        mostrarMenuHome();
+                        mostrarMenuHome(userLogado);
                 }
             } else {
                 System.out.println("Opcao invalida. Tente novamente.");

@@ -15,9 +15,12 @@ public class LoginView {
     private LoginController loginController = new LoginController();
     private MenuHomeView menuHomeView = new MenuHomeView();
     private RedeSocial rede = new RedeSocial();
-    boolean user = false;
-    boolean password = false;
-    boolean login = true;
+    private String loginUser;
+    private String senha;
+    private boolean user = false;
+    private boolean password = false;
+    private boolean login = true;
+
     public void logar() {
 
         Perfil teste = new Perfil("teste","teste@email.com", "123456");
@@ -29,8 +32,8 @@ public class LoginView {
 
             if (user == true && password == true) {
                 login = false;
-                System.out.println("Ola, " + rede.getUserLogado().nome + ". Seja bem-vinde!");
-                menuHomeView.mostrarMenuHome();
+                System.out.println("Ola, " + rede.getUserLogado().getNome() + ". Seja bem-vinde!");
+                menuHomeView.mostrarMenuHome(rede.getUserLogado());
             }
         }
     }
@@ -38,17 +41,18 @@ public class LoginView {
     private void inserirLogin(){
         try {
             System.out.println("Login (email): ");
-            String loginUser = input.nextLine();
+            loginUser = input.nextLine();
             user = loginController.validaLogin(loginUser);
         } catch (UserNotFoundException e) {
             System.out.println(e.getMessage());
             inserirLogin();
         }
     }
+
     private void inserirSenha(){
         try {
             System.out.println("Senha: ");
-            String senha = input.nextLine();
+            senha = input.nextLine();
             password = loginController.validaPassword(senha);
         } catch (InvalidPasswordException e) {
             System.out.println(e.getMessage());

@@ -46,6 +46,5 @@ public class MenuInicialView {
             System.out.println("Por favor, digite um numero.");
             mostrarMenuInicial();
         }
-
     }
 }

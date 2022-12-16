@@ -1,4 +1,3 @@
-import model.Perfil;
 import view.MenuInicialView;
 
 public class Main {
@@ -12,16 +11,6 @@ public class Main {
         MenuInicialView miv = new MenuInicialView();
         miv.mostrarMenuInicial();
 
-
-
-//
-//    public static void postar(Perfil p) {
-//        p.postar();
-//    }
-//
-//    public static void timeline(Perfil p) {
-//        p.imprimir();
-//    }
     }
 }
 
