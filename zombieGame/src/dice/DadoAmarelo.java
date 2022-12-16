@@ -2,7 +2,7 @@ package dice;
 
 public class DadoAmarelo extends Dado{
 
-    public DadoAmarelo(Face[] faces) {
+    public DadoAmarelo() {
         super( new Face[]{
                 Face.CEREBRO,
                 Face.PASSOS,

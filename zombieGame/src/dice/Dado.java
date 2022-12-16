@@ -6,7 +6,6 @@ public abstract class Dado {
 
     private Face[] faces;
     private Face faceSorteada;
-    private String cor;
 
     protected Dado(Face[] faces) {
         this.faces = faces;
@@ -26,10 +25,6 @@ public abstract class Dado {
 
     public void setFaceSorteada (Face faceSorteada){
         this.faceSorteada = faceSorteada;
-    }
-
-    public String getCor() {
-        return cor;
     }
 
     public void resetFaceSorteada() {

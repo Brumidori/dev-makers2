@@ -3,6 +3,8 @@ package zombies;
 import bag.PoteDado;
 import dice.Dado;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Jogador {
@@ -38,6 +40,15 @@ public class Jogador {
     }
 
     public List<Dado> lancarDados(PoteDado pote, List<Dado> dadosSortearamPassosNaJogadaAnterior) {
-        return null;
+        //3 quantidade base de dados
+        int qtdeNecessario = 3 - dadosSortearamPassosNaJogadaAnterior.size();
+        pote.embaralhar();
+        List<Dado> dadosDoPote = pote.entregarDado(qtdeNecessario);
+        List<Dado> dadosDisponiveis = new ArrayList<>(dadosDoPote);
+        dadosDisponiveis.addAll(dadosSortearamPassosNaJogadaAnterior);
+        for (Dado dado: dadosDisponiveis) {
+            dado.jogar();
+        }
+        return dadosDisponiveis;
     }
 }
