@@ -1,15 +1,15 @@
 package view;
 
 import model.Post;
-import model.RedeSocial;
 
-import static repository.ListaPost.posts;
+import static model.ListaPost.posts;
 
 public class TimeLineView {
 
     public void mostrarTimeLine() {
         try {
             if(posts.size() > 0){
+                System.out.println("**************** TIMELINE ****************");
                 for (Post p : posts) {
                     System.out.println("-------------------------------------");
                     System.out.println((p.getUsuario().getNome()).toUpperCase() +

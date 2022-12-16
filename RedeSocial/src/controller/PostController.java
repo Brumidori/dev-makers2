@@ -2,7 +2,7 @@ package controller;
 
 import model.Perfil;
 import model.Post;
-import model.RedeSocial;
+import service.RedeSocial;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
