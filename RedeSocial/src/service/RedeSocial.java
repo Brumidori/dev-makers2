@@ -1,7 +1,9 @@
-package model;
+package service;
 
-import repository.ListaPost;
-import repository.ListaUsuarios;
+import model.ListaPost;
+import model.ListaUsuarios;
+import model.Perfil;
+import model.Post;
 import view.CadastroView;
 import view.LoginView;
 import view.PostView;

@@ -7,10 +7,11 @@ import java.util.Scanner;
 
 public class PostView {
 
-    PostController postController = new PostController();
-    MenuHomeView menuHomeView = new MenuHomeView();
+    private PostController postController = new PostController();
+    private MenuHomeView menuHomeView = new MenuHomeView();
     private Scanner input = new Scanner(System.in);
     private String conteudo;
+
     public void postar(Perfil userLogado){
         System.out.println("Texto post: ");
         conteudo = input.nextLine();

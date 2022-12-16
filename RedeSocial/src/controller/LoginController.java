@@ -3,7 +3,7 @@ package controller;
 import exceptions.InvalidPasswordException;
 import exceptions.UserNotFoundException;
 import model.Perfil;
-import model.RedeSocial;
+import service.RedeSocial;
 
 public class LoginController {
     private RedeSocial rede = new RedeSocial();

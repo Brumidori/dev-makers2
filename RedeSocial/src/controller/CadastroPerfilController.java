@@ -1,7 +1,7 @@
 package controller;
 
 import model.Perfil;
-import model.RedeSocial;
+import service.RedeSocial;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

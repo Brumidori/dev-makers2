@@ -1,7 +1,7 @@
 package view;
 
 import model.Perfil;
-import model.RedeSocial;
+import service.RedeSocial;
 
 import java.util.Scanner;
 

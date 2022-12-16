@@ -4,11 +4,11 @@ import controller.LoginController;
 import exceptions.InvalidPasswordException;
 import exceptions.UserNotFoundException;
 import model.Perfil;
-import model.RedeSocial;
+import service.RedeSocial;
 
 import java.util.Scanner;
 
-import static repository.ListaUsuarios.perfils;
+import static model.ListaUsuarios.perfils;
 
 public class LoginView {
     static final Scanner input = new Scanner(System.in);
