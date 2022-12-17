@@ -39,10 +39,11 @@ public class MenuHomeView {
                 }
             } else {
                 System.out.println("Opcao invalida. Tente novamente.");
-                menuInicialView.mostrarMenuInicial();
+                mostrarMenuHome(userLogado);
             }
         } catch (NumberFormatException e) {
             System.out.println("Opcao invalida. Insira um numero.");
+            mostrarMenuHome(userLogado);
         }
     }
 }
