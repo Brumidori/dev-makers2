@@ -28,26 +28,35 @@ public class Turno {
     }
 
     public void jogar() {
+        Scanner scanner = new Scanner(System.in);
         String continuarJogando = "n";
-        List<Dado> dadosASeremRelancados = new ArrayList<>();
+        ArrayList<Dado> dadosASeremRelancados = new ArrayList<>();
+        System.out.println("Jogador " + jogador.getNome() +
+                " é sua vez, realize uma jogada.");
         do {
-            System.out.println("Jogador " + jogador.getNome() + " eh a sua vez, realize uma acao");
             List<Dado> dadosLancados = jogador.lancarDados(pote, dadosASeremRelancados);
             dadosASeremRelancados.clear();
             for (Dado dado : dadosLancados) {
-                System.out.println("Voce lancou o dado " + dado.getTipoDado() +
-                        "e obteve o resultado " + dado.getFaceSorteada());
                 boolean dadoContabilizado = contabilizarDadoJogado(dado);
-                if(!dadoContabilizado){
+                if (!dadoContabilizado) {
                     dadosASeremRelancados.add(dado);
                 }
             }
             boolean forcarEncerramento = forcarEncerramentoTurno();
-            if(forcarEncerramento){
+            if (forcarEncerramento) {
+                if (qtdeTiros < 3) {
+                    System.out.println("------------------------------------------------------");
+                    System.out.println("Turno será encerrado pois você atingiu 13 cerebros consumidos");
+                } else {
+                    System.out.println("------------------------------------------------------");
+                    System.out.println("Turno será encerrado pois você levou " + qtdeTiros + " tiros");
+                }
                 break;
             }
-            System.out.println(qtdeCerebros + " cerebros consumidos, " + qtdeTiros + " tiros levados" );
-            System.out.println(jogador.getNome() + " gostaria de continuar a jogada? (s/n)");
+            System.out.println("Pontuação atual: " + (jogador.getQtdeCerebros() + qtdeCerebros) +
+                    " cerebros consumidos, " + qtdeTiros + " tiros levados");
+            System.out.println("------------------------------------------------------");
+            System.out.println(jogador.getNome() + " deseja jogar novamente?(s/n)");
             continuarJogando = scanner.nextLine();
         } while (continuarJogando.equalsIgnoreCase("s"));
         contabilizarTurno();
@@ -56,22 +65,20 @@ public class Turno {
     }
 
     private boolean forcarEncerramentoTurno() {
-        return qtdeTiros >= 3 || qtdeCerebros >= 13;
+        return qtdeTiros >= 3 || jogador.getQtdeCerebros() + qtdeCerebros >= 13;
     }
 
     private boolean contabilizarDadoJogado(Dado dado) {
+        System.out.println("Você lançou o dado " + dado.getTipoDado() +
+                " e obteve o resultado " + dado.getFaceSorteada());
         boolean contabilizado = dado.getFaceSorteada() != Face.PASSOS;
         if (contabilizado) {
             dadosUtilizadosNoTurno.add(dado);
             if (dado.getFaceSorteada() == Face.CEREBRO) {
-                System.out.println("Yeah, você consumiu mais um cerebro");
                 qtdeCerebros++;
             } else {
-                System.out.println("Mal dia, levou um tiro");
                 qtdeTiros++;
             }
-        } else {
-            System.out.println("Vai precisar correr mais, sua presa fugiu");
         }
         return contabilizado;
     }

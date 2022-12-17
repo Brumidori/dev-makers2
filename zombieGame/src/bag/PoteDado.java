@@ -10,8 +10,8 @@ public class PoteDado {
 
     private List<Dado> dados;
 
-    public PoteDado(ArrayList<Dado> dados) {
-        this.dados = this.dados;
+    public PoteDado(List<Dado> dados) {
+        this.dados = dados;
     }
 
     public void embaralhar() {

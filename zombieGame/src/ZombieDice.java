@@ -43,9 +43,42 @@ public class ZombieDice {
         }
         PoteDado pote = criarPote();
 
-        Jogador jogadorAtual = jogadores.get(posicaoJogadorNaLista);
-        Turno turnoAtual = new Turno(jogadorAtual, pote);
-        turnoAtual.jogar();
+        boolean continuarJogando = true;
+        do {
+            Jogador jogadorAtual = jogadores.get(posicaoJogadorNaLista);
+            System.out.println("Jogador atual: " + jogadorAtual.getNome());
+            Turno turnoAtual = new Turno(jogadorAtual, pote);
+            turnoAtual.jogar();
+            System.out.println("-----------------------------------------");
+            System.out.println("------------------- Placar --------------");
+            placar();
+            System.out.println("-----------------------------------------");
+            System.out.println("-----------------------------------------");
+            System.out.println("-----------  Trocando jogador -----------");
+            System.out.println("-----------------------------------------");
+            continuarJogando = jogadorAtual.getQtdeCerebros() < 13;
+            if (continuarJogando) {
+                posicaoJogadorNaLista++;
+                if (posicaoJogadorNaLista >= jogadores.size()) {
+                    posicaoJogadorNaLista = 0;
+                }
+            } else {
+                parabenizarJogador(jogadorAtual);
+            }
+        } while (continuarJogando);
+        System.out.println("Fim de jogo!");
+    }
+
+    public void parabenizarJogador(Jogador jogador) {
+        System.out.println("-----------------------------------------");
+        System.out.println("Parabéns " + jogador.getNome() +
+                ", você foi o vencedor dessa partida");
+    }
+
+    public void placar() {
+        for (Jogador jogador : this.jogadores) {
+            System.out.println("Jogador " + jogador.getNome() + " tem " + jogador.getQtdeCerebros() + " cerebros consumidos");
+        }
     }
 
     public PoteDado criarPote() {
@@ -72,6 +105,8 @@ public class ZombieDice {
     }
 
     public static void main(String[] args) {
+        ZombieDice dice = new ZombieDice();
+        dice.iniciarPartida();
     }
 }
 
