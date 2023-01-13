@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ddc1a649-bd9a-45c4-a28d-0d694b62f159" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/sinqia_913/src/docencia/AlunoPcd.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sinqia_913/src/docencia/Pessoa.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sinqia_913/src/veiculo/automotor/VeiculoAutomotor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sinqia_913/src/veiculo/automotor/aeronave/aviao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sinqia_913/src/veiculo/automotor/carro/Carro.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sinqia_913/src/veiculo/automotor/carro/VwFox.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sinqia_913/src/veiculo/automotor/carro/VwGol.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sinqia_913/src/veiculo/automotor/motocicleta/Moto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sinqia_913/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/sinqia_913/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sinqia_913/src/docencia/Aluno.java" beforeDir="false" afterPath="$PROJECT_DIR$/sinqia_913/src/docencia/Aluno.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sinqia_913/src/docencia/Professor.java" beforeDir="false" afterPath="$PROJECT_DIR$/sinqia_913/src/docencia/Professor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sinqia_913/src/veiculo/Veiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/sinqia_913/src/veiculo/Veiculo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sinqia_913/src/veiculo/VwGol.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/sinqia_913" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2IbaKz6jv8F0KVhJ1TG6f5wYzey" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "/Users/rafaelcruvello/Documents/PROGRAMACAO/LetsCode/dev-makers2/poo2",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ddc1a649-bd9a-45c4-a28d-0d694b62f159" name="Changes" comment="" />
+      <created>1670452677776</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1670452677776</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
