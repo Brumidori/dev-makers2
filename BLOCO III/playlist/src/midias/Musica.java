@@ -1,6 +1,8 @@
 package midias;
 
-import java.io.Serializable;
+import interfaces.IMidia;
 
-public class Musica implements Serializable {
+public class Musica implements IMidia {
+    private String nome;
+    private String local;
 }
