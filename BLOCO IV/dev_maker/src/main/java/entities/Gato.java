@@ -1,20 +1,31 @@
 package entities;
 
+import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.Date;
 
+@Entity
+@Table(name = "TB_GATOS")
 public class Gato {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String nome;
-    private String dono;
+
+    @Column(name = "DATANASCIMENTO")
     private Date datanascimento;
+
+    @Column(name = "ID_DONO")
+    private Integer idDono;
 
     @Override
     public String toString() {
         return "Gato{" +
                 "id=" + id +
                 ", nome='" + nome + '\'' +
-                ", dono='" + dono + '\'' +
+                ", dono='" + idDono + '\'' +
                 ", datanascimento=" + datanascimento +
                 '}';
     }
@@ -23,12 +34,16 @@ public class Gato {
         this.id = id;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public Integer getIdDono() {
+        return idDono;
     }
 
-    public void setDono(String dono) {
-        this.dono = dono;
+    public void setIdDono(Integer idDono) {
+        this.idDono = idDono;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public void setDatanascimento(Date datanascimento) {
@@ -41,10 +56,6 @@ public class Gato {
 
     public String getNome() {
         return nome;
-    }
-
-    public String getDono() {
-        return dono;
     }
 
     public Date getDatanascimento() {

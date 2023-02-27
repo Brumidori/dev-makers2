@@ -35,7 +35,7 @@ public class JDBCExemplo {
                 Gato gato = new Gato();
                 gato.setId(rs.getLong("ID"));
                 gato.setNome(rs.getString("NOME"));
-                gato.setDono(rs.getString("DONO"));
+               //gato.setIdDono(rs.getString("DONO"));
                 gato.setDatanascimento(rs.getDate("DATANASCIMENTO"));
                 gatos.add(gato);
             }

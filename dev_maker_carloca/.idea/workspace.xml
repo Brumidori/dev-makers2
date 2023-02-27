@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2571c905-b6e0-4d83-867c-0500c4969c25" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/main/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/Carro.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/Cliente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/Cor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/Locacao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/Unidade.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/hibernate.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BLOCO IV/dev_maker/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BLOCO IV/dev_maker/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BLOCO IV/dev_maker/src/main/java/JDBCExemplo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BLOCO IV/dev_maker/src/main/java/JDBCExemplo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BLOCO IV/dev_maker/src/main/java/entities/Gato.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BLOCO IV/dev_maker/src/main/java/entities/Gato.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2M9AgJtYvWXeV3vkJgyYoYNaSud" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="model" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="/Library/Java/JavaVirtualMachines/jdk-17.0.3.1.jdk/Contents/Home" />
+      <option name="MAIN_CLASS_NAME" value="main.Application" />
+      <module name="dev_maker_carloca" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Application" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2571c905-b6e0-4d83-867c-0500c4969c25" name="Changes" comment="" />
+      <created>1677169533984</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1677169533984</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
