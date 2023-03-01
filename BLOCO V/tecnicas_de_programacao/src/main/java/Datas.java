@@ -1,4 +1,6 @@
 import javax.swing.text.DateFormatter;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.text.DecimalFormat;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -52,21 +54,15 @@ public class Datas {
         //a partir da data atual, calcule e imprima uma compra de R$ 64.000,00 parcelado em 48x.
         // Imprima o valor e a data de cada parcela
 
-        double valorCompra = 64000.0;
-        int numParcelas = 48;
-        LocalDate dataAtual = LocalDate.now();
+        BigDecimal valorCompra = new BigDecimal(64000.0);
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
-        double valorParcela = valorCompra / numParcelas;
+        BigDecimal valorParcela = valorCompra.divide(new BigDecimal(48),2, RoundingMode.HALF_EVEN);
 
-        System.out.println("Compra de R$" + valorCompra + " parcelada em " + numParcelas + "x");
-
-        for (int i = 1; i <= numParcelas; i++) {
-            DecimalFormat df = new DecimalFormat("#.##");
-
-            LocalDate dataParcela = dataAtual.plusMonths(i);
+        for (int i = 1; i <= 48; i++) {
+            LocalDate dataParcela = LocalDate.now().plusMonths(i);
             String dataParcelaFormatada = dataParcela.format(formatter);
-            System.out.println("Parcela " + i + ": R$" + df.format(valorParcela) + " em " + dataParcelaFormatada);
+            System.out.println("Parcela " + i + ": R$" + valorParcela + " em " + dataParcelaFormatada);
         }
 
     }
