@@ -1,3 +1,5 @@
+package datas.com.fuso;
+
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.time.DayOfWeek;
